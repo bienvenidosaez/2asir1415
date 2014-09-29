@@ -1,0 +1,55 @@
+<!--Doctype-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<!--Estructura de la Web-->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+
+
+	<head profile="url" lang="es">
+
+	<title lang="es">CV</title>
+
+<!--Zona de meta-->
+	<meta name="descripcion" content="Frase descriptiva de la página" />
+	<meta name="author" content="Aida Cumbreras Casado" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	</head>
+
+<!--Contenido Visible-->
+	<body>
+
+<h1>Rellena tu CV</h1>
+
+<fieldset>
+	<legend align= "left"> Datos Personales	</legend> 
+
+<p><label for="provincia">Provincia </label></p>
+<p><select id="provincia" name="provincia">
+	<option value="-selecciona-" selected >-selecciona-</option>
+	<option value="huelva">Huelva</option>
+	<option value="sevilla">Sevilla</option>
+</select></p>
+
+<p><label for="dia mes año">Fecha de Nacimiento </label></p>
+<p><input type="tex" name="dia" id="dia" /> de 
+<select id="mes" name="mes">
+	<option value="enero" selected>Enero</option>
+	<option value="febrero" >Febrero</option>
+</select> de
+<input type="tex" name="año" id="año" /></p>
+
+<p><label for="dia mes año">Temas de interés </label></p>
+<select id="temas" multiple="multiple" >
+	<option value="1">Administracion de bases de datos</option>
+	<option value="2">Analisis y Programacion</option>
+	<option value="3">Arquitectura</option>
+	<option value="4">Calidad</option>
+	<option value="5">ERP, CRM, Bussiness Intelligence</option>
+</select>
+
+</fieldset>
+	</body>
+
+</html>
