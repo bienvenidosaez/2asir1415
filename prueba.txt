@@ -1,4 +1,4 @@
-Prueba de archivo modificado
+﻿Prueba de archivo modificado
 Otra línea
 
 Prueba de archivo modificado
@@ -16,3 +16,5 @@ Otra línea
 
 Prueba de archivo modificado
 Otra línea
+
+Prueba de Juan Aurelio
