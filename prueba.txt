@@ -1,2 +1,6 @@
 Prueba conjunta
+<<<<<<< HEAD
 Alberto añade una linea al documento
+=======
+javier 
+>>>>>>> origin/master
