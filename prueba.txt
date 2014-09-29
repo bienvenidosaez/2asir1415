@@ -7,8 +7,6 @@ Otra línea
 Prueba de archivo modificado
 Otra línea
 
-Prueba de archivo modificado
-Otra línea
 
 Prueba de archivo modificado
 Otra línea
