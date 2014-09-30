@@ -1,0 +1,31 @@
+Url de ayuda para git: http://git-scm.com/book/es/
+
+Comandos útiles de GIT:
+1.- Configurar datos de usuario:
+$ git config --global user.name "John Doe"
+$ git config --global user.email johndoe@example.com
+
+2.- Iniciar un repositorio, nos colocamos en el directorio donde queremos inicializar el repositorio y ejecutamos el siguiente comando:
+$ git init
+
+3.- Añadir un remoto
+$ git remote add origin url_del_repositorio
+
+4.- Ver como está el repositorio
+$ git status
+
+5.- Añadir un fichero al repositorio
+$ git add nombre_del_fichero_y_ruta
+
+6.- Eliminar un fichero del repositorio
+$ git rm nombre_del_fichero
+
+7.- Hacer un commit: una vez añadidos los cambios o borrado los archivos que queramos hacemos un commit para guardar una instancia del momento en el que está el repositorio
+$ git commit -m "Mensaje que queremos poner a nuestro commit"
+
+8.- Trabajar con nuestro repositorio remoto
+Traer los datos del repositorio a nuestra repo local (sincronizar)
+$ git pull origin master #con esto le decimos que se traiga la rama master del origin
+
+Subir los cambios (commits) al origen
+$ git push origin master #con esto le decimos que suba la rama master

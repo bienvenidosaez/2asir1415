@@ -1,0 +1,10 @@
+# Instalar Git
+sudo apt-get install git
+
+# Instalar Sublime Text 2
+# Añadimos el repositorio
+sudo add-apt-repository ppa:webupd8team/sublime-text-2
+# Actualizamos
+sudo apt-get update
+#Instalamos
+sudo apt-get install sublime-text

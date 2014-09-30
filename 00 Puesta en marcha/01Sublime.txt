@@ -1,0 +1,9 @@
+# Instalar gestor de paquetes
+url: 
+# Abrimos sublime text, menú => View => Show Console
+Pegamos lo que tenemos en el portapapeles y le damos a intro. Nos informará de que tenemos que reiniciar
+Abrimos sublime de nuevo y ya tenemos el gestor de paquetes instalado. Lo abrimos con Ctr+Shift+P, buscamos Install Package:
+Paquetes a instalar:
+- EMMET
+- Colorpicker
+- HTML5
