@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pruebas de formularios</title>
+</head>
+<body>
+
+    <h2>Ejemplos de formularios</h2>
+    
+    <form action="procesa-login.php" method="get">
+
+        <p>
+            <label for="nombre">Nombre: </label>
+            <input required type="text" id="nombre" name="nombre">
+        </p>
+        <p>
+           <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos">
+        </p>
+
+        <p>
+            <label for="edad">Edad: <input disabled required type="number" id="edad"></label>
+        </p>
+
+        <p>
+            <label for="espanol"><input type="checkbox" id="espanol" name="espanol"> ¿Español?</label>
+        </p>
+        <p>Sexo:</p>
+        <p>
+            <label for="hombre"><input checked id="hombre" type="radio" name="sexo" value="h"> Hombre</label><br>
+            <label for="mujer"><input id="mujer" type="radio" name="sexo" value="m"> Mujer</label>
+        </p>
+
+        <p>
+
+            <label for="sexo">Sexo:</label>
+            <select name="sex" id="sexo">
+                <option value="-">-</option>
+                <option value="h">Hombre</option>
+                <option value="m">Mujer</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="foto">Foto <input type="file" name="foto"> </label>
+        </p>
+
+        <input type="hidden" name="id-usuario" value="24">
+
+        <label for="f-nacimiento">Fecha de nacimiento: <input type="date" name="f-nacimiento" id="f-nacimiento"></label>
+
+        <p>
+            <label for="email">Email: <input type="email"></label>
+        </p>
+
+        <p>
+            Prueba<input type="url">
+        </p>
+
+        <button>Enviar</button>
+        <input type="reset" value="Borrar">
+        
+        
+    </form>
+
+</body>
+</html>
