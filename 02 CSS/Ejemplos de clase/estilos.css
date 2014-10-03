@@ -60,18 +60,10 @@ div.detalle-articulo section.galeria img{
     padding-bottom: 50px;
     background-color: white;
     margin: 15px;
-    float: left;
 }
 
-div.detalle-articulo section.galeria:first-of-type img:nth-child(2),
-div.detalle-articulo section.galeria:first-of-type img:nth-child(4)
-{
-    float:left;
-    background-color: red;
-}
-
-.clearfix{
-    clear: both;
+div.detalle-articulo section.galeria img:nth-child(3){
+    background-color: yellow;
 }
 
 /* Fin de los estilos para la vista detalle-articulo */
