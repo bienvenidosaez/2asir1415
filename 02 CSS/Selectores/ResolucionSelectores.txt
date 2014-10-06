@@ -1,0 +1,12 @@
+# Examen Selectores CSS
+
+1.- em.especial
+2.- section.galeria img:nth-child(3)
+3.- article p a.rojo
+4.- section.home h1#titulo
+5.- section.primero *:first-child p+p
+6.- Los em que estén dentro de un h1 que esté dentro de los párrafos de clase primero
+7.- El párrafo primer hijo de los section de clase home
+8.- Selecciona las imágenes hijas de los section de clase galería que ocupen las posiciones de los múltiplos de 3
+9.- Los párrafos de clase especial que estén dentro de "algo" que a su vez estén dentro de un section con clase galería
+10.- Los span que sean descendientes de un p que sea hijo directo de un section de clase galería
