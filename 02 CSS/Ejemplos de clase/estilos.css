@@ -1,5 +1,14 @@
+html{
+    font-size: 100%;
+}
+
+body{
+    font-size: 16px;
+}
+
 h1{
     text-align: center;
+    font-size: 3rem;
 }
 
 #logotipo{
@@ -24,7 +33,14 @@ div.home #logotipo{
 
 div.home article{
     margin-top: 50px;
+    font-size: 1.2em;
 }
+
+div.home article p{
+    font-size: 1.2rem;
+}
+
+
 
 div.home article:first-of-type{
     margin-top: 0px;
