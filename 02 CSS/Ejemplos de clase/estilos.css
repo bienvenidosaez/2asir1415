@@ -68,6 +68,7 @@ div.detalle-articulo figure{
 div.detalle-articulo section.galeria{
     background-color: #c9ccc7;
     padding: 20px;
+    position: relative;
 }
 
 div.detalle-articulo section.galeria img{
@@ -84,9 +85,68 @@ div.detalle-articulo section.galeria img{
 div.detalle-articulo section.galeria img:nth-child(3){
     background-color: yellow;
     position: relative;
-    left: 100px;
-
+    left: 50px;
+    bottom: 50px;
 }
+
+div.detalle-articulo section.galeria img:nth-child(5){
+    background-color: green;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+div.circulo{
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    margin: 2em auto;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border-width: 5px;
+    border-color: red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 50;
+    margin-left: -100px;
+    margin-top: -100px;
+}
+
+div.cuadrado{
+    width: 400px;
+    height: 30px;
+    padding: 1em;
+    background-color: pink;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    margin-left: -200px;
+}
+
+div.cuadrado ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+div.cuadrado ul li{
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 1rem;
+    border: 1px solid black;
+    padding: .2em .5em;
+    background-color: white;
+}
+
+div.cuadrado ul li a{
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
 
 /* Fin de los estilos para la vista detalle-articulo */
 
