@@ -54,3 +54,40 @@ section.contenido{
     display: inline-block;
     vertical-align: top;
 }
+
+section.articulos{
+    background-color: #ccc;
+}
+
+section.articulos img{
+    border: 1px solid red;
+    background-color: red;
+    background-image: url('chrome.png');
+    background-repeat: no-repeat;
+    background-size: 85px;
+    background-position: 326px 121px;
+
+}
+
+div.experimentos{
+    width: 500px;
+    position: relative;
+}
+
+img#bolita{
+    background-color: transparent;
+    border: 0;
+    position: absolute;
+    width: 60px;
+    left: 341px;
+    top: 126px;
+    transition: 1s;
+}
+
+img#bolita:hover{
+    -ms-transform: rotate(360deg); /* IE 9 */
+    -webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */
+    transform: rotate(360deg);
+    width: 80px;
+    opacity: 0;
+}
