@@ -1,5 +1,7 @@
 # -*- encoding: utf-8 -*-
 
+# http://www.mclibre.org/consultar/python/ejercicios/ej_variables.html
+
 # Inicializamos las variables
 n1 = 0
 n2 = 0
