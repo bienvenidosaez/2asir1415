@@ -1,0 +1,231 @@
+html{
+    font-size: 100%;
+}
+
+body{
+    font-size: 16px;
+}
+
+h1{
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Lobster', cursive;
+}
+
+#logotipo{
+    display: block;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wrapper{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    overflow: hidden;
+}
+
+
+/* Estilos para la vista home */
+div.home #logotipo{
+    width: 400px;
+}
+
+div.home article{
+    margin-top: 50px;
+    font-size: 1.2em;
+}
+
+div.home article p{
+    font-size: 1.2rem;
+}
+
+div.clearfix{
+    clear: both;
+}
+
+div.home article:first-of-type{
+    margin-top: 0px;
+}
+
+
+
+/* Fin de los estilos para la vista home */
+
+
+/* Estilos para la vista detalle-articulo */
+div.detalle-articulo #logotipo{
+    width: 200px;
+    display: inline;
+}
+
+div.detalle-articulo h1{
+    display: inline;
+}
+
+div.detalle-articulo figure{
+    display: inline;
+}
+
+div.detalle-articulo section.galeria{
+    background-color: #c9ccc7;
+    padding: 20px;
+    position: relative;
+    width: 800px;
+}
+
+div.detalle-articulo section.galeria img{
+    border: 1px solid black;
+    padding: 10px;
+    padding-bottom: 50px;
+    background-color: white;
+    margin: 15px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+
+div.detalle-articulo section.galeria img:nth-child(3){
+    background-color: yellow;
+    position: relative;
+    left: 50px;
+    bottom: 50px;
+}
+
+div.detalle-articulo section.galeria img:nth-child(5){
+    background-color: green;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+div.circulo{
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    margin: 2em auto;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border-width: 5px;
+    border-color: red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 50;
+    margin-left: -100px;
+    margin-top: -100px;
+}
+
+div.cuadrado{
+    width: 100%;
+    height: 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 51;
+}
+
+div.cuadrado ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+div.cuadrado ul li{
+    display: inline-block;
+    vertical-align: top;
+    margin-right: .5rem;
+    background-color: pink;
+}
+
+div.cuadrado ul li:hover{
+    background-color: #ebd0da;
+}
+ 
+div.cuadrado ul li:hover a{
+    text-decoration: underline;
+}
+
+
+div.cuadrado ul li a{
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1em 2em;
+    display: block;
+}
+
+div.cuadrado ul li a:active{
+    border: 1px inset black;
+}
+
+aside.navegacion{
+    background-color: #d20006;
+    height: 20px;
+}
+
+aside.navegacion a{
+    color: black;
+    text-decoration: none;
+    border: 1px solid pink;
+}
+
+aside.navegacion a:active{
+    border: 1px inset #000;
+}
+
+aside.navegacion a:first-of-type{
+    float: left;
+}
+
+aside.navegacion a:last-of-type{
+    float: right;
+}
+
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li{
+    display: inline-block;
+    vertical-align: top;
+    background-image: url('google-sprite.png');
+    font-size: 0;
+}
+
+nav ul li a{
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
+nav ul li.busqueda{
+    background-position: -6px 196px;
+}
+
+nav ul li.busqueda:hover{
+    background-position: -26px 196px;
+}
+
+/* Fin de los estilos para la vista detalle-articulo */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
