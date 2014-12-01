@@ -3,10 +3,9 @@
 print 'Escribe una cadena:'
 cadena = str(input())
 
-print list(cadena[:len(cadena)/2])
-print list(reversed(cadena[len(cadena)/2+1:]))
+cadena = cadena.replace(' ','').lower()
 
-if cadena[:len(cadena)/2] == list(reversed(cadena[len(cadena)/2+1:])):
+if cadena[:len(cadena)/2] == cadena[::-1][:len(cadena)/2]:
 	print 'Es palíndromo'
 else:
 	print 'No lo es'
