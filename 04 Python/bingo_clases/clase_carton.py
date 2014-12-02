@@ -22,7 +22,13 @@ class Carton:
 			return False
 
 	def imprimir(self):
-		print u'Mis números son: %s' % self.numeros
+		print u'%s' % self.numeros
+
+	def tienes_numeros(self):
+		if len(self.numeros >0):
+			return True
+		else:
+			return False
 
 
 
