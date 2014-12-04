@@ -25,7 +25,7 @@ class Carton:
 		print u'%s' % self.numeros
 
 	def tienes_numeros(self):
-		if len(self.numeros >0):
+		if len(self.numeros)>0:
 			return True
 		else:
 			return False
