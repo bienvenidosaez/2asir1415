@@ -12,6 +12,7 @@
             <ul>
                 <li><a href="/">Inicio</a></li>
                 <li><a href="servicios.php">Servicios</a></li>
+                <li><a href="galeria.php">Galeria</a></li>
                 <li><a href="contacto.php">Contacto</a></li>
             </ul>
         </nav>

@@ -1,4 +1,20 @@
-<?php include('comunes/cabecera.php'); ?>
+<?php include('comunes/cabecera.php');
+
+    define ("URLLOREMPIXEL", "http://lorempixel.com/");
+
+    $ancho  = 100;
+    $alto   = 100;
+
+    if(isset($_GET['ancho'])){
+        $ancho = $_GET['ancho'];
+    }
+
+    if(isset($_GET['alto'])){
+        $alto = $_GET['alto'];
+    }
+ 
+
+?>
 
     <h2>Página de inicio</h2>
     <p>Este es el contenido de la página de inicio</p>
@@ -64,11 +80,11 @@
 
     }//Fin del switch
 
-    print $resultado;
 
     $contador = 0;
     while ($contador < 10){
-        print '<p><img src="http://lorempixel.com/400/200/?'.$contador.'" alt=""></p>';
+        // http://lorempixel.com/100/100/?0
+        print '<p><a href="http://google.es"><img src="'.URLLOREMPIXEL.$ancho.'/'.$alto.'/?'.$contador.'" alt=""></a></p>';
         $contador++;
     }//Fin del while
 
