@@ -1,7 +1,51 @@
 body{
     font-size: 16px;
+    background-color: #dab422;
+    margin: 0;
 }
+
+header{
+    background-color: white;
+    padding: 1em;
+}
+
+header h1{
+    color: black;
+}
+
+header nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: .2em .5em;
+    border: 1px solid black;
+    background-color: #da5661;
+    color: black;
+}
+
+header nav ul li:hover{
+    background-color: #dad5d9;
+}
+
+header nav ul li a{
+    text-decoration: none;
+}
+
 
 h1{
     color: blue;
+}
+
+img{
+    border: 1px solid black;
+    padding: 1em;
+    background-color: white;
+}
+
+img.azul{
+
 }
