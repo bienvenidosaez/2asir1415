@@ -17,7 +17,7 @@
     $ciudad = $_POST['ciudad'];
     
     foreach ($personas as $persona) {
-      if(stripos($persona[0], $nombre) !== false && stripos($persona[2], $ciudad)){ //stripos no discrimina entre mayúscuas y minúsculas mientras que strpos SI
+      if((stripos($persona[0], $nombre) !== false) && (stripos($persona[2], $ciudad) !== false)){ //stripos no discrimina entre mayúscuas y minúsculas mientras que strpos SI
         array_push($encontrados, $persona);
       }//Fin del if
     }//Fin del foreach
