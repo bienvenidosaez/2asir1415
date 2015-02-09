@@ -32,7 +32,7 @@
 </head>
 <body>
   <h1>Mini Google</h1>
-  <form action="index.php" method="POST">
+  <form action="multiple.php" method="POST">
     <p>
       <label for="busqueda">¿Dime el nombre de la persona que quieres buscar?</label><br><br>
       <input required value="<?php print $buscar; ?>" type="text" name="busqueda"><button>Buscar</button></p>

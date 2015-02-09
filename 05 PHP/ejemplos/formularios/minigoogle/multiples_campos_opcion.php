@@ -10,11 +10,13 @@
   $encontrados = [];
   $nombre = '';
   $ciudad = '';
+  $opcion = '';
 
   //Verificamos que la petición de la página se hace a través de un formulario vía POST
   if(isset($_POST['nombre'])){
     $nombre = $_POST['nombre'];
     $ciudad = $_POST['ciudad'];
+    $opcion = $_POST['opcion'];
     
     foreach ($personas as $persona) {
       if((stripos($persona[0], $nombre) !== false) && (stripos($persona[2], $ciudad) !== false)){ //stripos no discrimina entre mayúscuas y minúsculas mientras que strpos SI
@@ -36,7 +38,7 @@
   <title>Mini Google</title>
 </head>
 <body>
-  <h1>Mini Google</h1>
+  <h1>Mini Google con opción</h1>
   <form action="#" method="POST">
     <p>
       <label for="nombre">¿Dime el nombre de la persona que quieres buscar?</label>
@@ -45,6 +47,10 @@
     <p>
       <label for="ciudad">¿Dime la ciudad de la persona que quieres buscar?</label>
       <input value="<?php print $ciudad; ?>" type="text" name="ciudad" id="ciudad">
+    </p>
+    <p>
+      <input type="radio" name="opcion" value="and" <?php if($opcion==='and'){ print 'checked'; } ?>>Buscar con criterio AND<br>
+      <input type="radio" name="opcion" value="or"  <?php if($opcion==='or'){ print 'checked'; } ?>>Buscar con criterio OR<br>
     </p>
     <button>Buscar</button>
 
