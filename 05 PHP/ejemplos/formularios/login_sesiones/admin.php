@@ -1,7 +1,13 @@
 <?php
     
   session_start();
-  if(!isset($_SESSION['logueado'])){
+  if(isset($_SESSION['logueado'])){
+    //Si entra aquí es que está logueado pero tenemos que comprobar que es de tipo 1
+    if($_SESSION['tipo_usuario'] != 1){
+      header('Location: /formularios/login_sesiones/index.php');
+    }
+  }else{
+    //Si entra aquí es que no está logueado
     header('Location: /formularios/login_sesiones/login.php');
   }
   
@@ -20,10 +26,9 @@
   */
 ?>
 
-  <h1>Documentación secreta</h1>
-  <p>Hola k ase</p>
+  <h1>Administrador del sitio</h1>
+  <p>Hola k ase contactando</p>
   <p>
-    <a href="admin.php">Ir al administrador</a> - 
     <a href="logout.php">Cerrar sesión</a>
   </p>
   

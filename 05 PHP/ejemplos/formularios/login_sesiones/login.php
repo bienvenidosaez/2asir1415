@@ -22,15 +22,17 @@
         $usuario    = $_POST['usuario'];
         $clave      = $_POST['clave'];
 
-        if (($usuario == 'Bienve') && ($clave == '123')){
-            //Si llega hasta aquí es que ha metido los datos correctos
-            session_start();
-            $_SESSION['logueado'] = 1;
-            header('Location: /formularios/login_sesiones/index.php');
-        }else{
-            $error = 'Usuario y password incorrecto';
+        foreach ($personas as $persona) {
+            if($usuario == $persona[3] && $clave == $persona[4]){
+                //Si entra aquí es que ha escrito un usuario de mi array personas
+                session_start();
+                $_SESSION['logueado'] = 1;
+                $_SESSION['tipo_usuario'] = $persona[5];
+                header('Location: /formularios/login_sesiones/index.php');
+            }else{
+                $error = 'Usuario y password incorrecto';
+            }
         }
-
     }
 
 
