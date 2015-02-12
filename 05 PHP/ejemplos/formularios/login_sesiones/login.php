@@ -1,4 +1,18 @@
 <?php
+    
+    // Nombre completo  -  Edad  -  Ciudad  -  Nombre usuario  -  Password  -  Tipo
+    // Tipo 1: Administrador y Tipo 2: Usuario normal
+
+    /*
+        Página index.php: protegida y sólo visible para usuarios válidos
+        Página admin.php: protegida y sólo visible para usuarios administradores (tipo 1)
+    */
+    $personas = [
+        ['Bienvenido Saez Muelas',  30, 'Motril',           'bsaez',        'bbb',      1],
+        ['Aida Cumbreras Casado',   25, 'Isla Cristina',    'acumbreras',   'aaa',      1],
+        ['Juan Aurelio Pecino',     40, 'Isla Cristina',    'jaurelio',     'jjj',      2],
+        ['Alberto Romero Ramos',    32, 'Huelva',           'aromero',      'rrr',      2]
+    ];
 
     $usuario = '';
     $clave = '';
