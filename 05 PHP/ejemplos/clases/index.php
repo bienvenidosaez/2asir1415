@@ -1,10 +1,19 @@
 <?php
 
+  session_start();
+
   include('php/class_jugador.php');
 
-  $j = new Jugador('Bienve', 'Saez Muelas', 6);
-  $j2 = new Jugador('Martin', 'Pepe');
-  $j2->presentarse();
+  $j = new Jugador('Bienve', 'Saez Muelas');
+
+  // if(!isset($_SESSION['jugador'])){
+  //   $j = new Jugador('Bienve', 'Saez Muelas');
+  //   $_SESSION['jugador'] = $j;
+  // }else
+
+  // {
+  //   $j = $_SESSION['jugador'];
+  // }
 
 ?>
 
@@ -54,6 +63,7 @@
         <div class="col-sm-12">
           <h1>Clases</h1>
           <?php $j->presentarse(); ?>
+
         </div>
       </div>
     </div>
