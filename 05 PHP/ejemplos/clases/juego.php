@@ -1,3 +1,21 @@
+<?php
+
+  include('php/class_jugador.php');
+  include('php/class_bombo.php');
+
+  if(!isset($_POST['nombrej1'])){
+    header('Location: /clases/');
+  }
+
+  $nombre_j1 = $_POST['nombrej1'];
+  $nombre_j2 = $_POST['nombrej2'];
+
+  $bombo = new Bombo();
+  $j1 = new Jugador($nombre_j1, 'Saez Muelas');
+  $j2 = new Jugador($nombre_j2, 'Perez');
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -44,18 +62,32 @@
         <div class="col-sm-12">
           <h1>Bienvenidos al Bingo las Vegas</h1>
 
-          <form action="juego.php" method="post">
-            <div class="form-group">
-              <label for="nombrej1">Nombre Jugador 1</label>
-              <input required type="text" class="form-control" id="nombrej1" name="nombrej1" placeholder="Inserta el nombre del jugador 1">
-            </div>
-            <div class="form-group">
-              <label for="nombrej2">Nombre Jugador2 </label>
-              <input required type="text" class="form-control" id="nombrej2" name="nombrej2" placeholder="Inserta el nombre del jugador 2">
-            </div>             
+          <?php
 
-            <button type="submit" class="btn btn-default">Enviar</button>
-          </form>
+            print $bombo->imprimir();
+
+            $j1->presentarse();
+            $j2->presentarse();
+
+            $contador = 1;
+            while($j1->cuantos_numeros_te_quedan() > 0 && $j2->cuantos_numeros_te_quedan() > 0 && $bombo->quedan() == True){
+
+              $bola = $bombo->sacabola();
+              print "<p>La bola nº $contador es: $bola</p>";
+              $j1->tachar_numero($bola);
+              $j2->tachar_numero($bola);
+              $tieneJ1 = $j1->cuantos_numeros_te_quedan();
+              $tieneJ2 = $j2->cuantos_numeros_te_quedan();
+              print "<p>El jugador 1 tiene: $tieneJ1 números</p>";
+              print "<p>El jugador 2 tiene: $tieneJ2 números</p>";
+              $contador++;
+
+            }//Fin del while
+
+            //Después de jugar comprobamos quien ha ganado
+            // if()
+
+          ?>
 
         </div>
       </div>

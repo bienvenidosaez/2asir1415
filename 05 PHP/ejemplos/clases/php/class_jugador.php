@@ -5,31 +5,36 @@
 
 class Jugador
 {
-  private $uid;
   public  $nombre;
   public  $apellidos;
-  private $su_carton;
+  private $carton;
 
   //Recibirá dos parámetros uno para el nombre y otro para el apellido
   function __construct($n, $a) {
     $this->nombre     = $n;
     $this->apellidos  = $a;
-    $this->su_carton = new Carton();
+    $this->carton     = new Carton();
   }
 
   function presentarse(){
-
-    print 'Hola me llamo '.$this->nombre.' '.$this->apellidos.' y este es mi cartón: ';
-    print $this->su_carton->imprimirse_html();
+    print '<p>Hola me llamo '.$this->nombre.' '.$this->apellidos.' y este es mi cartón: </p>';
+    print $this->carton->imprimirse_html();
   }
 
-  function get_vidas(){
-    return $this->vidas;
+  // Función que recibe un número y devuelve verdadero o falso si está dicho número en números
+  function tiene($n){
+    return $this->carton->esta($n);
   }
 
-  function set_vidas($v){
-    $this->vidas = $v;
+  function tachar_numero($n){
+    return $this->carton->tachar($n);
   }
+
+  function cuantos_numeros_te_quedan(){
+    return $this->carton->me_quedan();
+  }
+
+
 
 }// Fin de la clase Jugador
 
