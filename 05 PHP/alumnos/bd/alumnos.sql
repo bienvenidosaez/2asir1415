@@ -7,7 +7,7 @@
 #
 # Host: localhost (MySQL 5.5.34)
 # Database: alumnos
-# Generation Time: 2015-03-09 18:05:21 +0000
+# Generation Time: 2015-03-11 11:15:35 +0000
 # ************************************************************
 
 
@@ -35,6 +35,20 @@ CREATE TABLE `alumnos` (
   CONSTRAINT `fk_clase` FOREIGN KEY (`clase`) REFERENCES `clases` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+LOCK TABLES `alumnos` WRITE;
+/*!40000 ALTER TABLE `alumnos` DISABLE KEYS */;
+
+INSERT INTO `alumnos` (`id`, `nombreCompleto`, `edad`, `clase`)
+VALUES
+	(1,'Bienvenido Saez Muelas',31,NULL),
+	(2,'Ramon Jaen Martin',25,NULL),
+	(3,'Alberto el gimnasta',40,NULL),
+	(4,'Federico',35,NULL),
+	(5,'Periquito',69,4),
+	(6,'Fray luis de leon',39,NULL);
+
+/*!40000 ALTER TABLE `alumnos` ENABLE KEYS */;
+UNLOCK TABLES;
 
 
 # Dump of table clases
@@ -48,6 +62,20 @@ CREATE TABLE `clases` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+LOCK TABLES `clases` WRITE;
+/*!40000 ALTER TABLE `clases` DISABLE KEYS */;
+
+INSERT INTO `clases` (`id`, `nombre`)
+VALUES
+	(1,'1SMR'),
+	(2,'2SMR'),
+	(3,'1ASIR'),
+	(4,'2ASIR'),
+	(6,'prueba'),
+	(7,'tiriri');
+
+/*!40000 ALTER TABLE `clases` ENABLE KEYS */;
+UNLOCK TABLES;
 
 
 # Dump of table usuarios

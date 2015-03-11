@@ -38,7 +38,7 @@
 <?php include_once "php/header.php"; ?>
 
     <div class="container">
-      <div class="col-sm-4 col-sm-offset-4">
+      <div class="col-md-4 col-md-offset-4 col-sm-12">
         <h1>Login</h1>
         <form class="form-signin" action="#" method="post">
           <h2 class="form-signin-heading">Inicio de sesión</h2>
