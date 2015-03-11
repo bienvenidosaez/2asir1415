@@ -60,6 +60,31 @@ class Bd
     $clase = $this->conexion->get_row($consulta);
     return $clase;
   }
+
+  function get_nalumnos_clase($idClase){
+    $consulta = "select count(*) from alumnos where clase=$idClase";
+    $nAlumnos = $this->conexion->get_var($consulta);
+    return $nAlumnos;
+  }
+
+  function get_alumnos_clase($idClase){
+    $consulta = "select * from alumnos where clase=$idClase";
+    $alumnos = $this->conexion->get_results($consulta);
+    return $alumnos;
+  }
+
+  function update_alumno($nuevo_alumno){
+    $consulta = "update alumnos set nombreCompleto='$nuevo_alumno->nombre', edad='$nuevo_alumno->edad', clase='$nuevo_alumno->clase' where id='$nuevo_alumno->id'";
+    $devolucion = $this->conexion->query($consulta);
+    return $devolucion;
+  }
+
+  function delete_alumno($idAlumno){
+    $consulta = "delete from alumnos where id='$idAlumno'";
+    $devolucion = $this->conexion->query($consulta);
+    return $devolucion;
+  }
+
 }
 
 

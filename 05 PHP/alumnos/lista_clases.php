@@ -19,12 +19,21 @@
           <thead>
             <tr>
               <th>Nombre de la clase</th>
+              <th>Nº de alumnos</th>
+              <th>Ver</th>
             </tr>
           </thead>
           <tbody>
             <?php foreach ($clases as $clase){ ?>
               <tr>
                 <td><?php print $clase->nombre; ?></td>
+                <td>
+                  <?php 
+                    $nalumnos = $bd->get_nalumnos_clase($clase->id);
+                    print $nalumnos;
+                  ?>
+                </td>
+                <td><a href="detalle_clase.php?id=<?php print $clase->id; ?>" class="btn btn-default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a></td>
               </tr>
             <?php }//Fin del foreach ?>
           </tbody>

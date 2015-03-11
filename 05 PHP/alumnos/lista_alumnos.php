@@ -15,6 +15,10 @@
     <div class="container">
       <div class="col-sm-12">
         <h1>Alumnos</h1>
+        <?php
+          if(isset($_GET['delete'])){ ?>
+        <div class="alert alert-success">Alumno eliminado correctamente</div>
+        <?php  } ?>
         <table class="table">
           <thead>
             <tr>

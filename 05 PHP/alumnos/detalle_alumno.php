@@ -26,7 +26,10 @@
           <?php }else{ ?>
           <p>No hay alumno con ese id</p>
           <?php } ?>
-          <p><a href="editar_alumno.php?id=<?php print $datos_alumno->id; ?>" class="btn btn-primary">Editar</a></p>
+          <p>
+            <a href="editar_alumno.php?id=<?php print $datos_alumno->id; ?>" class="btn btn-primary">Editar</a>
+            <a href="eliminar_alumno.php?id=<?php print $datos_alumno->id; ?>" class="btn btn-danger"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Eliminar alumno</a>
+          </p>
       </div>
     </div>
 

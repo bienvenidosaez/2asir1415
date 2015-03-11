@@ -7,7 +7,7 @@
 #
 # Host: localhost (MySQL 5.5.34)
 # Database: alumnos
-# Generation Time: 2015-03-11 11:15:35 +0000
+# Generation Time: 2015-03-11 12:48:03 +0000
 # ************************************************************
 
 
@@ -40,12 +40,10 @@ LOCK TABLES `alumnos` WRITE;
 
 INSERT INTO `alumnos` (`id`, `nombreCompleto`, `edad`, `clase`)
 VALUES
-	(1,'Bienvenido Saez Muelas',31,NULL),
-	(2,'Ramon Jaen Martin',25,NULL),
-	(3,'Alberto el gimnasta',40,NULL),
-	(4,'Federico',35,NULL),
-	(5,'Periquito',69,4),
-	(6,'Fray luis de leon',39,NULL);
+	(1,'Bienvenido Saez Muelas',38,2),
+	(2,'Ramon Jaen Martin',33,1),
+	(3,'Alberto el gimnasta',40,3),
+	(4,'Federico',35,NULL);
 
 /*!40000 ALTER TABLE `alumnos` ENABLE KEYS */;
 UNLOCK TABLES;

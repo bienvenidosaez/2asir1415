@@ -5,7 +5,7 @@
   $devolucion = 0; //Variable para controlar si se ha realizado el insert correctamente
 
   $clases = $bd->get_clases();
-  
+
   if(isset($_GET['id'])){
     $idAlumno = $_GET['id'];
     $alumno = $bd->get_alumno($idAlumno);
@@ -13,6 +13,19 @@
     header('Location: index.php');
   }
 
+  if(isset($_POST['nombre'])){
+    $id           = $_POST['id'];
+    $nuevo_nombre = $_POST['nombre'];
+    $nueva_edad   = $_POST['edad'];
+    $nueva_clase  = $_POST['clase'];
+    $alumno_actualizado         = new stdClass();
+    $alumno_actualizado->id     = $id;
+    $alumno_actualizado->nombre = $nuevo_nombre;
+    $alumno_actualizado->edad   = $nueva_edad;
+    $alumno_actualizado->clase  = $nueva_clase;
+    $devolucion                 = $bd->update_alumno($alumno_actualizado);
+    $alumno = $bd->get_alumno($idAlumno); 
+  }
 
 ?>
 
@@ -26,6 +39,7 @@
         <div class="alert alert-success">Alumno editado correctamente</div>
         <?php } ?>
         <form action="#" method="post">
+          <input type="hidden" name="id" value="<?php print $alumno->id; ?>">
           <div class="form-group">
             <label for="nombre">Nombre completo</label>
             <input type="text" class="form-control" id="nombre" name="nombre" value="<?php print $alumno->nombreCompleto; ?>">

@@ -35,14 +35,14 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Alumnos <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="alumnos.php">Listar</a></li>
+                <li><a href="lista_alumnos.php">Listar</a></li>
                 <li><a href="nuevo_alumno.php">Nuevo</a></li>
               </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Clases <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="clases.php">Listar</a></li>
+                <li><a href="lista_clases.php">Listar</a></li>
                 <li><a href="nueva_clase.php">Nueva</a></li>
               </ul>
             </li>          
