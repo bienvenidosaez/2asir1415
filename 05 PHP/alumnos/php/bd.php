@@ -74,7 +74,11 @@ class Bd
   }
 
   function update_alumno($nuevo_alumno){
-    $consulta = "update alumnos set nombreCompleto='$nuevo_alumno->nombre', edad='$nuevo_alumno->edad', clase='$nuevo_alumno->clase' where id='$nuevo_alumno->id'";
+    if(isset($nuevo_alumno->foto)){
+      $consulta = "update alumnos set nombreCompleto='$nuevo_alumno->nombre', edad='$nuevo_alumno->edad', clase='$nuevo_alumno->clase', foto='$nuevo_alumno->foto' where id='$nuevo_alumno->id'";
+    }else{
+      $consulta = "update alumnos set nombreCompleto='$nuevo_alumno->nombre', edad='$nuevo_alumno->edad', clase='$nuevo_alumno->clase' where id='$nuevo_alumno->id'";
+    }
     $devolucion = $this->conexion->query($consulta);
     return $devolucion;
   }
@@ -83,6 +87,12 @@ class Bd
     $consulta = "delete from alumnos where id='$idAlumno'";
     $devolucion = $this->conexion->query($consulta);
     return $devolucion;
+  }
+
+  function search_alumnos($q){
+    $consulta = "select * from alumnos where nombreCompleto like '%$q%'";
+    $alumnos = $this->conexion->get_results($consulta);
+    return $alumnos;
   }
 
 }

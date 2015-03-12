@@ -45,8 +45,13 @@
                 <li><a href="lista_clases.php">Listar</a></li>
                 <li><a href="nueva_clase.php">Nueva</a></li>
               </ul>
-            </li>          
+            </li>
+            <li><a href="logout.php">Salir</a></li>         
           </ul>
+          <form class="navbar-form navbar-right" method="get" action="buscar.php">
+            <input name="q" type="text" class="form-control" placeholder="Buscar...">
+          </form>
+          
         </div><!--/.nav-collapse -->
         <?php } ?>
       </div>
